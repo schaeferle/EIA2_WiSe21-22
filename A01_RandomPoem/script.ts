@@ -23,7 +23,7 @@ namespace ScriptRandomPoem {
 
     let randomPoem: string = subjectsArray [bausteinSubjects] + " " + predicatesArray [bausteinPredicates] + " " + objectsArray [bausteinObjects] + ".";
     
-    //console.log(zufallsSatz)
+    //console.log(randomPoem)
 
     _subjectsArray.splice(bausteinSubjects, 1);
     _predicatesArray.splice(bausteinPredicates, 1);
@@ -32,3 +32,4 @@ namespace ScriptRandomPoem {
     return randomPoem;
 
 }}
+
