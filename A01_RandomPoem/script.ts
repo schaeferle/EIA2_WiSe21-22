@@ -1,4 +1,4 @@
-namespace ScriptRandomPoem{
+namespace ScriptRandomPoem {
 
     let subjectsArray: string[] = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
     let predicatesArray: string[] = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
