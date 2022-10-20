@@ -15,7 +15,7 @@ var ScriptRandomPoem;
         let bausteinPredicates = Math.floor(Math.random() * _predicatesArray.length);
         let bausteinObjects = Math.floor(Math.random() * _objectsArray.length);
         let randomPoem = subjectsArray[bausteinSubjects] + " " + predicatesArray[bausteinPredicates] + " " + objectsArray[bausteinObjects] + ".";
-        //console.log(zufallsSatz)
+        //console.log(randomPoem)
         _subjectsArray.splice(bausteinSubjects, 1);
         _predicatesArray.splice(bausteinPredicates, 1);
         _objectsArray.splice(bausteinObjects, 1);
