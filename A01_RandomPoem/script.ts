@@ -8,14 +8,14 @@ namespace ScriptRandomPoem {
 
     for (let index = 6; index >= 1; index--) {
 
-    
+
     //console.log (index)
 
     let finalSentence: string = getVerse (subjectsArray, predicatesArray, objectsArray);
     console.log(finalSentence);
 }
 
-    function getVerse (_subjectsArray, _predicatesArray, _objectsArray): string {
+    function getVerse (_subjectsArray: string [], _predicatesArray: string [], _objectsArray: string[]): string {
     
     let bausteinSubjects: number = Math.floor(Math.random() * _subjectsArray.length);
     let bausteinPredicates: number =  Math.floor(Math.random() * _predicatesArray.length);
