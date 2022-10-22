@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(39, 120, 74);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+.span {
+    position: fixed;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    height: 60px;
+    width: 200px;   
+}
+
+.div0 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-style: dotted;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.div1 {
+    position: absolute;
+    margin-left: 500px;
+    height: 400px;
+    width: 400px;
+    border-style: dotted;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+    color: white;
+    height: 25px;
+    width: 75px;
+    border-style: groove;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+}
