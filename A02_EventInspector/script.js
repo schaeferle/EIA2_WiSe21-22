@@ -9,7 +9,7 @@ Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du di
 var ScriptRandomPoem;
 (function (ScriptRandomPoem) {
     window.addEventListener("load", handleLoad);
-    let span; //globaler Zugriff
+    let span;
     let button;
     function handleLoad(_event) {
         let div0 = document.createElement("div");
