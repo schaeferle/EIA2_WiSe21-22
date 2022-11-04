@@ -31,7 +31,6 @@ h1{
 .buy2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #ffffff30;
-    border-color: #e2365b;
     border-style: solid;
     margin: 10px;
     padding: 10px;
@@ -54,17 +53,26 @@ input::placeholder{
 }
 
 input[type=checkbox]{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
 }
 
 .fa-trash{
-    font-size: 15px;
+    font-size: 25px;
     margin: 15px;
+    
 }
 
 .fa-pen{
-    font-size: 15px;
+    font-size: 25px;
     margin-top: 15px;
+    margin-right: 40px;
+    
+}
+
+.fa-trash:hover, .fa-pen:hover,  .boxInput:hover, input:hover{
+    opacity: 60%;
+    cursor: pointer;
 }
 
