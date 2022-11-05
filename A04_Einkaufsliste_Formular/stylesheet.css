@@ -1,0 +1,78 @@
+body{
+    background-color: #0a3330;
+    color: #ffffff;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 48px;
+    padding: 5px;
+}
+
+#addToList{
+    background-color: #ffffff50;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff30;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.buy2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff30;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.boxInput{
+    padding: 10px;
+    background-color: #ffffff50;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+
+input[type=checkbox]{
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+}
+
+.fa-trash{
+    font-size: 25px;
+    margin: 15px;
+    
+}
+
+.fa-pen{
+    font-size: 25px;
+    margin-top: 15px;
+    margin-right: 40px;
+    
+}
+
+.fa-trash:hover, .fa-pen:hover,  .boxInput:hover, input:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
+
