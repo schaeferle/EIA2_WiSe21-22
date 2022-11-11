@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufliste</title>
+    <script src="script.js" defer=""></script>
+    <script src="data.js" defer=""></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+    <h1>SHOPPING LIST</h1>
+
+    <div id="addToList">
+        <input type="text" id="inputProduct" class="boxInput" placeholder="Add Product...">
+        
+        <input type="number" id="inputAmount" class="boxInput" placeholder="Add Amount...">
+        
+        <input type="text" id="inputNote" class="boxInput" placeholder="Add Note...">
+
+        <button id="add" class="boxInput">Add</button>
+    </div>
+    <div id="list">
+        <div id="product0" class="buy0">
+            <input type="checkbox" id="check0">
+            <p id="product0"></p>
+            <p id="amount0"></p>
+            <p id="date0"></p>
+            <p id="note0"></p>
+            <button id="delete0" class="fas fa-trash"></button>
+            <button id="edit0" class="fas fa-pen"></button>
+        </div>
+    
+    </div>
+
+
+
+</body>
+</html>

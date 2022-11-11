@@ -17,18 +17,7 @@ h1{
     justify-content: space-between;
 }
 
-.buy1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #ffffff30;
-    border-style: solid;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-}
-
-.buy2{
+.buy{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #ffffff30;
     border-style: solid;
