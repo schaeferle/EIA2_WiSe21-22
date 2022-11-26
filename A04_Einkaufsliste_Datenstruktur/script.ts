@@ -1,24 +1,82 @@
 /*
- Aufgabe:<L04_Einkaufsliste_Datenstruktur>
+ Aufgabe:<L06_Einkaufsliste_DatabaseServer>
  Name: <Elias Schäfer>
  Matrikel: <268512>
- Datum: <05.11.2022>
+ Datum: <24.11.2022>
  Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du dich inspirieren ließest>
 */
 
 namespace Einkaufliste {
 
+    interface Input {
+        inputProduct: string;
+        inputAmount: number;
+        buy: boolean;
+        done: boolean;
+        inputNote: string;
+        lastPurchase: string;
+    }
+
+    interface Items {
+        [category: string]: Input[];
+    }
+
+    let inputs: Input[];
+
+
     window.addEventListener("load", handleLoad);
 
-    let productButton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#add");
+    let itemButton: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#add");
     let listProduct: HTMLDivElement = <HTMLDivElement>document.querySelector("#list");
 
-    function handleLoad(): void {
+    async function handleLoad(): Promise <void> {
+        itemButton.addEventListener("click", addNewProduct);
+        await getList();
+    }
 
-        productButton.addEventListener("click", addNewProduct);      
+    async function getList() {
+        inputs = [];
+        let response: Response = await fetch("https://webuser.hs-furtwangen.de/~schaefee/database/index.php");
+        let list: string = await response.text();
+        let inputItems: Items = JSON.parse(list);
+        getData(inputItems);
         writeProducts();
+    }
+
+    function getData(_inputs: Items) {
+        let newList: string [] = [];
+        for (let index in _inputs.data) {
+            newList.push(index);
+        }
+        for (let counter of newList) {
+            inputs.push(_inputs.data[Number(counter)]);  
+        }
+    }
+
+    async function sendList(_element: number, _command: string): Promise<void> {
+
+        let sendInputs: string = JSON.stringify(inputs);
+
+        let query: URLSearchParams = new URLSearchParams(<any>sendInputs);
+        await fetch("https://webuser.hs-furtwangen.de/~schaefee/database/?command=" + _command + "&collection=data&id=" + _element + "&" + query.toString());
+        alert("List sent!");
+
+        getList();
+
+    }
+
+    async function sendListElement( _command: string): Promise<void> {
+        let sendInputs: string = JSON.stringify(inputs);
+
+        let query: URLSearchParams = new URLSearchParams(<any>sendInputs);
+        await fetch("https://webuser.hs-furtwangen.de/~schaefee/database/?command=" + _command + "&collection=data" + query.toString());
+        alert("List sent!");
+
+        getList();
 
     }   
+
+
     function writeProducts(): void {
         let list: HTMLDivElement = <HTMLDivElement>document.querySelector("#list");
         list.innerHTML = "";

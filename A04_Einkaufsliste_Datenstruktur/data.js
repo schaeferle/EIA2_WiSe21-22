@@ -1,15 +1,15 @@
 "use strict";
-var Datenstruktur;
-(function (Datenstruktur) {
-    Datenstruktur.input = [
+var Einkaufliste;
+(function (Einkaufliste) {
+    Einkaufliste.inputs = [
         {
             inputProduct: "Grüne Äpfel",
             inputAmount: 4,
             buy: true,
             done: false,
             inputNote: "Granny Smith",
-            lastPurchase: "01.01.2001"
+            lastPurchase: "05.11.2022"
         }
     ];
-})(Datenstruktur || (Datenstruktur = {}));
+})(Einkaufliste || (Einkaufliste = {}));
 //# sourceMappingURL=data.js.map
